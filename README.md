@@ -35,7 +35,8 @@ from hideshowpassword.widgets import HideShowInput
 
 class MyUserForm(forms.ModelForm):
     username = forms.CharField(widget=forms.TextInput(attrs={'readonly':True}))
-    password = forms.PasswordField(label="Let the world see my password!", widget=HideShowInput(render_value=True))
+    password = forms.PasswordField(label="Let the world see my password!", 
+      widget=HideShowInput(render_value=True, attrs = {'class': 'showhide'}))
 ```
 
 You'll also want to make sure to include the requisite form media in your

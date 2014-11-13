@@ -1,0 +1,1 @@
+$('.showhide').showPassword(true);

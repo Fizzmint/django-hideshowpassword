@@ -1,7 +1,8 @@
-from django.forms import widgets
+from django import forms
 
-class ShowHideInput(forms.PasswordInput):
+class HideShowInput(forms.PasswordInput):
     class Media:
         css =  {
             'all': ('css/hideShowPassword.css',) }
-        js = ('js/hideShowPassword.min.js',)
+        js = ('js/hideShowPassword.min.js', 
+              'js/hideshow_custom.js')
